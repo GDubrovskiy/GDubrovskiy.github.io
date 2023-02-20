@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Grigoriy Dubrovskiy</title>
+  <meta name="author" content="Grigoriy Dubrovskiy">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Simonetta:400,900|Balthazar">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <link rel="stylesheet" href="/path/to/folder/css/academicons.css"/>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	<div id="w" itemscope itemtype="http://schema.org/Person">
+		<header class="clearfix">
+			<h3 style="text-align:right;"><a href="files/GDubrovskiy.pdf">Open Resume</a></h3>
+            <div id="info">			
+				<h1><span itemprop="name">Grigoriy Dubrovskiy</span></h1>
+				<h3><span itemprop="jobTitle">Software &amp; Control Systems Engineer, M.Sc.</span></h3>
+				
+                <h3 itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				  <span itemprop="addressLocality">Pittsburgh, PA &amp; Boston, MA</span>, 
+				  <span itemprop="addressCountry">USA</span>
+				</h3>
+                
+				<h3><a href="https://www.linkedin.com/in/gvdubrovskiy/">
+                        <img src="files/linkedin.png"></a> <a href="mailto:gdubrovs@alumni.nd.edu">
+                        <img src="files/email.png"></a> <a href="https://scholar.google.com/citations?user=eFAdNWUAAAAJ&hl=en">
+                        <img src="files/scholar.png"></a> </h3>
+                
+                
+			</div>
+			<div id="photo">
+				<img src="files/me.JPG" alt="Grigoriy Dubrovskiy resume photo avatar" itemprop="image" />
+            </div>
+            
+		</header>
+		
+		<section id="profile">
+			<h2>Files from my projects  </h2>
+            
+ <br />           
+                 <div style="width:100%; height:100%; text-align:center">
+                     <h4>Primitive actions for a Ground Robot ("Pick up" and "Drop Off" objects based on camera) (implemented in C++):</h4> 
+                  <img src="Projects/ActPickUpCam.png"
+                    style="float:middle">
+                 </div>
+            
+                <div class="indent">
+                        <ul>
+                            <li>Implemented primitive actions in C++ for a ground robot, using a web camera and OpenCV2 for object  recognition (e.g. videos: “<a href="https://youtu.be/y46DvRE8oYA" class="blue bold">Pick Up an object</a>” - approach to a certain distance to the object and pick it up, “<a href="https://youtu.be/j496rz1GJRM" class="blue bold">Drop Off an object</a>” - drop off an object and reverse back to a certain distance from the object, as well as "Camera Calibration" primitives) </li>
+                            
+                            <li>These "primitives" are supposed to be used by an Integrated Task and Motion Planning algorithm as primitives for high-level solution (it should decide which primitives should be activated and when).</li>
+                            
+                            <li>Source code: <a href="Projects/ActPickUpCam.zip">ActPickUpCam.zip</a> (request the password via email)</li>
+                            
+                            <li>I used the object recognition technique based on color from this <a href="https://www.youtube.com/watch?v=bSeFrPrqZ2A">tutorial</a>. Here is the source code for the tutorial: <a href="Projects/ObjectTrackingTut.cpp">ObjectTrackingTut.cpp</a><li>
+                                                        
+                            <li>Basically, the picking up an object based on a camera consist of 3 components: 1. Gripping Behavior - for gripping an object once it is close enough (highest priority). 2. Rotational Behavior to keep robot rotating to find an object. 3. Linear Behavior - robot will be approaching towards an object as long as Gripping and Rotational Behaviors are not submitting commands.<li>
+                            
+                            <li>I used a "IndoorGPS.a" library for getting indoor localization information from infrared cameras, which track the position of the robot via reflections from the markers. The robot was using GPS to find the object if it is not detected by sensors.<li>
+                            
+                            <li>Dependencies: your machine should have <a href="http://robots.mobilerobots.com/wiki/ARIA" class="blue bold">ARIA</a>, <a href="http://robots.mobilerobots.com/wiki/ARNL/MOGS_Navigation_and_Localization_Software" class="blue bold">ARNL</a> installed</li>
+                            
+                            <li>The most interesting files: <span style="font-weight:bold">ExampleCam.cpp</span> (initialization of objects for robot, camera and activating Behaviors etc), <span style="font-weight:bold">ActPickUpCam.cpp, ActPickUpCam.h</span> (decription and implementation of Behaviors), <span style="font-weight:bold">VideoProcessing.cpp, VideoProcessing.h</span> (video processing) </li>
+                            
+                        </ul>
+                 </div>
+            
+<br />
+            
+                 <div style="width:100%; height:100%; text-align:center">
+                     <h4>PioneerArmDemo (implemented in C++):  </h4> 
+                  <img src="Projects/PioneerArm.png"
+                    style="float:middle">
+                 </div>            
+            <div class="indent">
+                        <ul>
+                            <li>Implemented APIs for "initialization" and "moving the robot arm" for a 7 DoF manipulator (<a href="https://www.cdiweb.com/ProductDetail/CYTONGAMMA1500-Robai/559413/" class="blue bold">Cyton Gamma 1500</a>) and implemented few demos (e.g. video: “<a href="https://youtu.be/d2fHL2QoBNE" class="blue bold">picking up an object</a>”).</li>
+                            
+                            <li>Source code: <a href="Projects/PioneerArmDemo.zip">PioneerArmDemo.zip</a> (request the password via email)<li>
+                            
+                            <li>The future plan was to provide vectors of coordinates for all 7 degrees of freedom, generated by <a href="https://ompl.kavrakilab.org/" class="blue bold">The Open Motion Planning Library</a>, which is a library with sampling-based motion planning algorithms (example: <a href="https://ompl.kavrakilab.org/optimalPlanningTutorial.html">Optimal Path Planning with sampling-based approaches</a>).<li>
+                            
+                            <li>The path planning algorithm were supposed to run in simulated environment in <a href="http://gazebosim.org/">Gazebo simulator</a>, solving Integrated Task and Motion Planning problems (similar to the code below implemented for Ground Robots)<li>
+
+                            <li>Dependencies: your machine should have installed <a href="http://outgoing.energid.info/Installers/cytonGamma1500ViewerSetup-4.0.20130130-ubuntu-12.04-amd64.sh">libraries</a> for the <a href="http://robots.mobilerobots.com/wiki/Cyton_Gamma_1500_Arm">Cyton Gamma 1500</a></li>
+                            
+                            <li>The most interesting files: <span style="font-weight:bold">PioneerArmDemo.cpp, PioneerArmDemo.h</span> (implementation of the class, instantiating a PioneerArm object, sending demo angles) </li>
+                            
+                        </ul>
+                 </div>
+            
+    
+            
+            
+ <br />           
+
+                 <div style="width:100%; height:100%; text-align:center">
+                     <h4>Optimized Integrated Task and Motion Planning (implemented in C++):  </h4>
+                  <img src="Projects/Optimized.jpg"
+                    style="float:middle">
+                 </div> 
+            
+			     <div class="indent">
+                        <ul>
+                            <li>Presentation with details: <a href="Projects/May_2.pdf">presentation on May 2, 2017</a></li>
+                            
+                            <li>Source code: <a href="Projects/Optimized_ITMP.zip">Optimized_ITMP.zip</a> (request the password via email)<li>
+                            
+                            <li>Implementation of a similar project (non-optimized ITMP): <a href="https://youtu.be/UoS1ikEJp0s" class="blue bold"> Video with implemented Integrated Task and Motion Planning</a>. We used Omron Pioneer Robots for the implementation.</li>
+                            
+                            <li>Basically, this code uses CPLEX to find an optimal solution for an <span style="font-weight:bold">Integrated Task and Motion Planning</span> problem via <span style="font-weight:bold">Mixed Integer Linear Progreamming</span>. The <span style="font-weight:bold">Mission</span> is given in a form of a <a href="https://en.wikipedia.org/wiki/Linear_temporal_logic" class="blue bold">Linear Temporal Logic</a> (and particularly in Counter Linear Temporal Logic over Constraint System, which is a flavor of LTL). The output is a sequence of "Primitives", execution of which will lead to accomplishing the <span style="font-weight:bold">Mission</span></li>
+                            
+                            <li>There are 3 pieces for making OptWarehouse: WarehouseScene.o (done by my labmate for another project), OptWarehouse.o (done by myself), AuxFunctions.o (done by my labmate for another project)</li>
+                             
+                            <li>The mission is given as: "RpO(1);RdOaW(1,(and (= x -4000) (= y 4000));Rh" (Robot's initial position is at 1; Object 1 should be moved to coordinates -4000,4000; Return Home)</li>                           
+                            
+                            <li>I implemented only operators: Next, Until, Negation. But, operators Eventually (neg Always neg phi), Always (true Until phi), Last (not true until the last time step) can be implemented using Next, Until and Negation.</li> 
+                            <li> Optimized Manhattan norm (sum of projections to X and Y) </li>                             
+                            <li>Each primitive (GoTo, PickUp, DropOff) are described as a set of constraints, e.g. during using primitve GoTo the robot should be on Left, Right, Up or Below from each obstacle and walls</li>
+                            <li>Each state variable defined in the CLTLB(D) specification is encoded as a vector of variables in the CPLEX solver with a planning horizon K.</li>
+
+                            <li>Dependencies: your machine should have CPLEX installed (version 12, release 6, <a href="https://www.ibm.com/products/ilog-cplex-optimization-studio/pricing" class="blue bold">CPLEX</a>)</li>
+                            
+                            <li>The most interesting files: <span style="font-weight:bold">OptWarehouse.cpp, OptWarehouse.h</span> (done by myself; declaring constraints for the primitives, setting optimization goals), <span style="font-weight:bold">WarehouseScene.cpp, WarehouseScene.h</span> (done by my <a href="https://scholar.google.com/citations?user=2VABUowAAAAJ&hl=en" class="blue bold">labmate</a>; initialization of the environment: boundaries, walls, objects)  </li>
+                                                        
+                        </ul>
+                 </div>
+ 
+    
+          
+   <br />         
+                         
+            
+                <div style="width:100%; height:100%; text-align:center">
+                    <h4>Mission level control for drones (implemented in C++):  </h4>
+                  <img src="Projects/AutoQuadM4.png"
+                    style="float:middle">
+                 </div> 
+            
+            <div class="indent">
+                        <ul>
+                            
+                            <li>Implemented mission level control for <a href="http://autoquad.org/autoquad-m4/" class="blue bold">AutoQuad M4</a> drones with another graduate <a href="http://engineering.utsa.edu/usl/team/samuel-silva/" class="blue bold">student</a>. <a href="https://www.youtube.com/watch?v=2BSkVGJLLJ4" class="blue bold">Video with 2 Autoquad M4</a>.</li>
+                            
+                            <li>Source code: <a href="Projects/AutoQuad_M4.zip">AutoQuad_M4.zip</a> (request the password via email)</li>
+                            
+                            <li> We used middleware ROS (Robot Operating System) for implementing nodes, sending messages, etc. </li>
+                            
+                            <li> We modified firmware of the drone (written in C) to receive indoor GPS from the infrared cameras and made other changes. </li>
+                                                
+                            <li>Dependencies: your machine should have <a href="http://wiki.ros.org/Distributions" class="blue bold">ROS Indigo</a> installed </li>
+                            
+                            <li>The most interesting files: <span style="font-weight:bold">optitrack_pub/main.cpp</span> (here ROS node "pub" advertizing localization data to the topic "optitrack/pos"), <span style="font-weight:bold">M4/main.cpp</span> (initializes ROS node, which receives localization and mission commands and republishes this data to serial port), <span style="font-weight:bold">M4/mission.cpp</span> (takes care of receiving, decoding and republishing mission messages into a serial port), <span style="font-weight:bold">M4/prompt.cpp</span> (user interface for sending mission commands)</li>
+                            
+                        </ul>
+                 </div>
+            
+            
+            
+            
+            
+            
+            
+            
+		</section>
+           <footer>
+               <h3 style="text-align:center;">Last update: July 2019</h3>
+            </footer>
+	</div>
+   
+    
+    
+</body>
+</html>

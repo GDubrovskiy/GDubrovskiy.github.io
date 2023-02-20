@@ -1,0 +1,19 @@
+      <h4>Potential Fields  :  </h4> 
+            <div class="indent">
+                        <ul>
+                            <li>Implementation for the paper: <a href="https://arxiv.org/pdf/1609.07006.pdf" class="blue bold">"SafeGuardPF"</a> and <a href="https://www.youtube.com/watch?v=BBO450wZY34" class="blue bold">video</a></li>
+                            
+                            <li>The main idea is to implement an autonomous navigation system with formally proven collision avoidance in unknown and dynamic environments (Honestly saying, this sounds great, but the robot's logic is overly conservative)</li>     
+                            
+                            <li>"Safety guarantess" come from the fact that we bound the robot's velocity based on the distance to the closest object so that it can always come to a complete stop if that object is going start approaching towards the robot with a certain maximum velocity (assumed).</li> 
+                            
+                            <li>Basically, the navigational logic consist of two main components:  </li>
+                            
+                            <li>My role in the project: participated in implementing the idea, provided by a senior graduate student (so, it is mostly not .</li>
+                            
+                            <li>Dependency: your machine should have <a href="http://robots.mobilerobots.com/wiki/ARIA" class="blue bold">ARIA</a>, <a href="http://robots.mobilerobots.com/wiki/ARNL/MOGS_Navigation_and_Localization_Software" class="blue bold">ARNL</a> installed on your machine </li>
+                            
+                        </ul>
+                 </div>
+
+                 

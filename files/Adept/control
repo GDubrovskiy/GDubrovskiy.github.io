@@ -1,0 +1,13 @@
+Package: libarvideo
+Version: 2.9.1+ubuntu16
+Architecture: amd64
+Maintainer: Reed Hedges <reed@mobilerobots.com>
+Installed-Size: 46967
+Depends: libaria (>= 2.9.1a+ubuntu16), libc6 (>= 2.17), libjpeg8 (>= 8c), libstdc++6 (>= 5.2)
+Section: contrib/MobileRobots
+Priority: optional
+Description: Video image acquisition for Adept MobileRobots/ActivMedia robots
+ Includes video image acquisition tools for various framegrabbers and cameras
+ including standard Linux v4l, Axis cameras (vapix); pan/tilt/zoom control
+ for Axis cameras; and server components for ArNetworking.
+Task: mobilerobots-basic
