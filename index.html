@@ -19,7 +19,7 @@
 			<h3 style="text-align:right;"><a href="files/GDubrovskiy.pdf" target="_self">Open Resume</a></h3>
             <div id="info">			
 				<h1><span itemprop="name">Grigoriy Dubrovskiy</span></h1>
-				<h3><span itemprop="jobTitle">Robotics, Software &amp; Control Systems Engineer, M.Sc.</span></h3>
+				<h3><span itemprop="jobTitle">Robotics and Software Engineer, M.Sc.</span></h3>
 				
                 <h3 itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 				  <span itemprop="addressLocality">Philadelphia, PA</span>,  
@@ -42,42 +42,40 @@
 		
 		<section id="profile">
 			<h2>About Me</h2>
-			<p itemprop="description">Robotics, Software &amp; Control Systems Engineer with 5+ years of applied experience in mobile robotics, autonomous driving, machine learning and motion planning in industrial and academic settings.</p>		
+            <div class="indent">
+                <ul> 
+                    <li>Robotics and Software Engineer with 6+ years of applied experience in autonomous driving, mobile robotics and motion planning
+in industrial and academic settings </li>
+                    
+                    <li> Software development breadth across motion planning, embedded systems, control systems, scripting and automated testing </li>
+                </ul>
+            </div>	
 		</section>
 
 
-        <section id="Certifications">
-			<h2>Certifications</h2>
-                    <div class="indent">
-                        <ul> 
-                            <li>DDS Training from RTI (Data Model, Architecture, QoS, Configuring Transports, Keys, Instances, etc)<span style="float:right;font-weight:normal; font-size:1.125em">March 2022</span> </li>
-                        	
-                        	<li>QNX Training (Architecture, Process & Thread Synchronization, IPC, Boot Image generation, profiling, etc) <span style="float:right;font-weight:normal; font-size:1.125em">March 2020</span> </li>
-
-                        	<li><a href="files/Vector_Academy_Certificate.pdf" target="_self">Classic AUTOSAR</a> Training (OS, SW Components, I/O, Comm, State Management, Sys. Services, NV Mem, Diag.) <span style="float:right;font-weight:normal; font-size:1.125em">July 2020</span> </li>
-
-                        	<li><a href="files/AUTOSAR_Safe.pdf" target="_self">AUTOSAR Safe</a> Training (Functional Safety, Memory Protection, Program Flow Control, Safe E2E, SafeRTE) <span style="float:right;font-weight:normal; font-size:1.125em">November 2020</span> </li>
-
-                        	<li><a href="files/AUTOSAR_CyberSecurity.pdf" target="_self">AUTOSAR CyberSecurity</a> Training (Basics of Cryptography, AutoSAR Crypto Stack, Secure OnBoard Comms, HSM) <span style="float:right;font-weight:normal; font-size:1.125em">December 2020</span> </li>
-
-                        	<li><a href="files/MICROSAR_Ethernet.pdf" target="_self">MICROSAR Ethernet</a> Training (Basics of Ethernet and TCP/IP, Ethernet in AUTOSAR, SOME/IP, etc) <span style="float:right;font-weight:normal; font-size:1.125em">May 2021</span> </li>
-
-                            <li><a href="files/AWS_Certification.pdf">AWS Certification</a> "Running Container-Enabled Microservices on AWS" <span style="float:right;font-weight:normal; font-size:1.125em">May 2019</span> </li>
-                            
-                            <li><a href="files/pilot_license.jpg" class="blue bold">FAA licensed</a> Drone Pilot, Part 107 <span style="float:right;font-weight:normal; font-size:1.125em">Jan 2017</span> </li>             
-                        </ul>
-                    </div>
-		</section> 
 
 		<section id="Experience">
 			<h2>Experience</h2>
                        
-            <h4 style="text-align:left;font-weight:bold"> <a href="https://motional.com/" class="blue bold"><i>Motional</i></a> (formerly Aptiv, until March 2020) <span style="float:right;font-weight:normal">Boston, MA -> Philadelphia, PA</span></h4>
+            <h4 style="text-align:left;font-weight:bold"> <a href="https://motional.com/" class="blue bold"><i>Motional</i></a> (formerly nuTonomy and then Aptiv) <span style="float:right;font-weight:normal">Boston, MA -> Philadelphia, PA</span></h4>
 
-            <h5 style="text-align:left;"> Senior Software Engineer - Motion Planning Team <span style="float:right;">August 2022 – present</span></h5>
+            <h5 style="text-align:left;"> Senior Software Engineer - Motion Planning - Trajectory Scoring and Selection <span style="float:right;">August 2022 – present</span></h5>
                 <div class="indent">
                         <ul>    
-                            <li>Trajectory scoring and Behavior selection</li>
+                            <li>Led a team of 4 people in development of Trajectory Scoring to prioritize Safety and Comfort, among diverse trajectory types</li>
+                            <li>Implemented Trajectory Scoring for a Safety Subsystem, considering Safety aspects only</li>
+                            <li>Implemented Trajectory Correction to account for a newer Vehicle Pose, compensating the delay to generate a trajectory</li>
+                            <li>Improved the Lane Change State Machine for performing Lane Changes efficiently & predictably to other road users</li>
+                            <li>Oversaw creation of a hybrid design and introduction of ML Scorer into a Rule-based Trajectory Scoring</li>
+                            <li>Optimized resource utilization (manually and automatically monitoring latencies, and apply fixes; CPU and memory usage, etc)</li>
+                            <li>Led review of weekly performance of deployed software and created tactical or strategic improvement plans based on that data</li>
+                            <li>Worked across teams on submodule designs (creating and reviewing; breaking down designs into actionable steps with timelines)</li>
+                            <li>Created Quarterly Plans and Retros for a team, provided weekly updates on OKRs to other teams and Directors</li>
+                            <li>Acted as designated Quality Software Reviewer for Planning team, helping to maintain extremely high software standards and
+mentor team members in best practices</li>
+                            <li>Conducted 30+ technical interviews and worked on refining job descriptions to identify strong candidates</li>
+                            <li>Introduced company-wide no-cheat (no spillover) code coverage</li>
+
                         </ul>
                     </div> 
 
@@ -87,9 +85,9 @@
                             
                             <li>Implemented sensor readers in C++14 for POSIX systems, reading data over Ethernet, CAN (radar, camera)</li>
                             <li>Worked with ECUs (Aurix TC397, TC399): programming in C99, flashing, debugging</li>
-                            <li>In-house Classic AutoSAR semi-expert (design, quote and implement the original prototype with MICROSAR)</li>
                             <li>Software/implementation point of contact for Functional Safety (ASIL) and CyberSecurity compliance</li>
-                            
+                            <!-- <li>In-house Classic AutoSAR semi-expert (design, quote and implement the original prototype with MICROSAR)</li> -->
+                        
                         </ul>
                     </div> 
 
@@ -144,26 +142,26 @@
                         <ul>
                             
                             
-                            <li>Developed algorithms in C/C++ in Linux environment for drones (Autoquad AQ6, Autoquad M4) for flying missions (<a href="https://www.youtube.com/watch?v=2BSkVGJLLJ4" class="blue bold">video with 2 Autoquad M4</a>) and Pioneer Robots (<a href="https://www.youtube.com/watch?v=BBO450wZY34" class="blue bold">video of a Pioneer Robot</a> with an implemented autonomous navigation system with formally proven collision avoidance in unknown and dynamic environments <a href="https://arxiv.org/pdf/1609.07006.pdf" class="blue bold">"SafeGuardPF"</a>).
+                            <li>Developed algorithms in C/C++ in Linux environment for drones (Autoquad AQ6, Autoquad M4) for flying missions (<a href="https://www.youtube.com/watch?v=2BSkVGJLLJ4" class="blue bold">video with 2 Autoquad M4</a>) and Pioneer Robots (<a href="https://www.youtube.com/watch?v=BBO450wZY34" class="blue bold">video of a Pioneer Robot</a> with an implemented autonomous navigation system with formally proven collision avoidance in unknown and dynamic environments <a href="https://arxiv.org/pdf/1609.07006.pdf" class="blue bold">"SafeGuardPF"</a>)
                             </li>
                             
-                            <li> Developed and implemented an algorithm in C++ for optimized integrated task and motion planning in a “Warehouse scenario”. The global mission is given in the form of a k-bounded LTL specification. <a href="https://youtu.be/UoS1ikEJp0s" class="blue bold"> Video with implemented Integrated Task and Motion Planning (non-optimized).</a>  </li>   
+                            <li> Developed and implemented an algorithm in C++ for optimized integrated task and motion planning in a “Warehouse scenario”. The global mission is given in the form of a k-bounded LTL specification. <a href="https://youtu.be/UoS1ikEJp0s" class="blue bold"> Video with implemented Integrated Task and Motion Planning (non-optimized)</a>  </li>   
                             
-                            <li> Implemented primitive actions (e.g. “<a href="https://youtu.be/y46DvRE8oYA" class="blue bold">Pick Up an object</a>”) in C++ for a ground robot, using a web camera for color recognition. </li>
+                            <li> Implemented primitive actions (e.g. “<a href="https://youtu.be/y46DvRE8oYA" class="blue bold">Pick Up an object</a>”) in C++ for a ground robot, using a web camera for color recognition </li>
                         
-                            <li>Implemented APIs for a 7 DoF manipulator (<a href="https://www.cdiweb.com/ProductDetail/CYTONGAMMA1500-Robai/559413/" class="blue bold">Cyton Gamma 1500</a>) and implemented few demos (e.g. “<a href="https://youtu.be/d2fHL2QoBNE" class="blue bold">picking up an object</a>”). </li>
+                            <li>Implemented APIs for a 7 DoF manipulator (<a href="https://www.cdiweb.com/ProductDetail/CYTONGAMMA1500-Robai/559413/" class="blue bold">Cyton Gamma 1500</a>) and implemented few demos (e.g. “<a href="https://youtu.be/d2fHL2QoBNE" class="blue bold">picking up an object</a>”) </li>
                             
-                            <li>Prototyped algorithms with Sampling-based Motion Planning approaches (e.g. RRT), using <a href="http://ompl.kavrakilab.org/" class="blue bold">Open Motion Planning Library</a>.</li>
+                            <li>Prototyped algorithms with Sampling-based Motion Planning approaches (e.g. RRT), using <a href="http://ompl.kavrakilab.org/" class="blue bold">Open Motion Planning Library</a></li>
                             
-                            <li>Served as a Drone Expert for the "Drone Sounder" project. Drone Sounder project was devoted to making measurements at different altitudes, using a drone with attached equipment. Responsibilities included: making decisions on planning, logistics, equipment procurement, flight safety, maintenance, modifications of the drone and being a drone pilot.</li> 
+                            <li>Served as a Drone Expert for the "Drone Sounder" project. Drone Sounder project was devoted to making measurements at different altitudes, using a drone with attached equipment. Responsibilities included: making decisions on planning, logistics, equipment procurement, flight safety, maintenance, modifications of the drone and being a drone pilot</li> 
 
-                            <li> Initiated purchase orders of equipment/components (~$4000+) and modified a DJI S900 drone for a "Drone Sounder" project.</li>
+                            <li> Initiated purchase orders of equipment/components (~$4000+) and modified a DJI S900 drone for a "Drone Sounder" project</li>
                             
-                            <li>Performed drone flights for multi-million grant application towards building a city-scale Advanced Wireless Testbed. <a href="https://www.youtube.com/watch?v=k9Qu1Qwu6uQ" class="blue bold">A video with DJI S900 and attached Software-Defined Radio.</a> Mass Media coverage by <a href="http://wsbt.com/news/local/drones-and-stronger-wi-fi-could-be-coming-to-south-bend" class="blue bold">WSBT</a>, <a href="http://www.wndu.com/video?vid=416659683" class="blue bold">WNDU</a>, <a href="http://www.abc57.com/story/34957109/south-bend-looks-to-expand-drone-advanced-technology-program" class="blue bold">ABC57</a> and <a href="http://www.southbendtribune.com/news/local/south-bend-and-notre-dame-demonstrate-next-gen-wireless/article_cf50c778-c15c-5d41-91aa-c60b696d2872.html?utm_medium=social&utm_source=email&utm_campaign=user-share" class="blue bold">South Bend Tribune.</a></li>
+                            <li>Performed drone flights for multi-million grant application towards building a city-scale Advanced Wireless Testbed. <a href="https://www.youtube.com/watch?v=k9Qu1Qwu6uQ" class="blue bold">A video with DJI S900 and attached Software-Defined Radio.</a> Mass Media coverage by <a href="http://wsbt.com/news/local/drones-and-stronger-wi-fi-could-be-coming-to-south-bend" class="blue bold">WSBT</a>, <a href="http://www.wndu.com/video?vid=416659683" class="blue bold">WNDU</a>, <a href="http://www.abc57.com/story/34957109/south-bend-looks-to-expand-drone-advanced-technology-program" class="blue bold">ABC57</a> and <a href="http://www.southbendtribune.com/news/local/south-bend-and-notre-dame-demonstrate-next-gen-wireless/article_cf50c778-c15c-5d41-91aa-c60b696d2872.html?utm_medium=social&utm_source=email&utm_campaign=user-share" class="blue bold">South Bend Tribune</a></li>
                             
-                            <li>Served as a Drone Expert for <a href="https://smcbellebats.wordpress.com/" class="blue bold">Belle Bats Research Team</a> in a project, which had a purpose to record acoustic signals of bats, avoiding each other. Responsibilities included: making design and safety recommendations/decisions, being the main Drone Pilot. <a href="https://www.instagram.com/p/BUZMBvoDBNQ/" class="blue bold">Video of a drone with equipment, flying in the night in the middle of a desert.</a> Acknowledgements in their paper in <a href="files/Kloepper_et_al-2018-Scientific_Reports.pdf">Scientific Reports.</a></li>                   
+                            <li>Served as a Drone Expert for <a href="https://smcbellebats.wordpress.com/" class="blue bold">Belle Bats Research Team</a> in a project, which had a purpose to record acoustic signals of bats, avoiding each other. Responsibilities included: making design and safety recommendations/decisions, being the main Drone Pilot. <a href="https://www.instagram.com/p/BUZMBvoDBNQ/" class="blue bold">Video of a drone with equipment, flying in the night in the middle of a desert.</a> Acknowledgements in their paper in <a href="files/Kloepper_et_al-2018-Scientific_Reports.pdf">Scientific Reports</a></li>                   
                             
-                            <li> Taught Laboratory sessions for senior undergraduate students EE40472 (Electrical and Hybrid Vehicles).</li>
+                            <li> Taught Laboratory sessions for senior undergraduate students EE40472 (Electrical and Hybrid Vehicles)</li>
                         </ul>
                     </div>   
             
@@ -172,7 +170,7 @@
             <h5 style="text-align:left;"> Engineer (Intern at Power Management Systems Department) <span style="float:right;">January 2015 – July 2015</span></h5>
                     <div class="indent">
                         <ul>
-                            <li>Designed Control Systems for Low Voltage Power Converters. <a href="files/Recommendation_Infineon.pdf">Recommendation.</a> </li>
+                            <li>Designed Control Systems for Low Voltage Power Converters (simulations performed in Cadence Virtuoso, VerilogA and Matlab)</li>
                             
                         </ul>
                     </div>                       
@@ -187,10 +185,10 @@
             
                     <div class="indent">
                         <ul>
-                            <li>Research Area: Autonomous Task and Motion Planning for Mobile Robots.</li>
+                            <li>Research Area: Autonomous Task and Motion Planning for Mobile Robots</li>
                             
                             <!--
-                            <li>Advisor: Hai Lin, Ph.D.</li>         
+                            <li>Advisor: Hai Lin, Ph.D</li>         
                             -->
 
                         </ul>
@@ -219,7 +217,7 @@
                             <li>Thesis: Control Systems Direct Drive. <a href="files/Manuscript_DD.pdf" class="blue bold">Manuscript for EPE'14-ECCE Europe</a>, <a href="http://ieeexplore.ieee.org/abstract/document/6910754/" class="blue bold">final version for EPE'14-ECCE Europe</a>, <a href="files/Poster_DD.pdf" class="blue bold">poster for EPE'14-ECCE Europe.</a></li>
                             
                             <!--
-                            <li>Advisor: <a href="http://amikerov.webs.com/" class="blue bold">Alexander Mikerov</a>, Ph.D., D.Sc.</li>                         
+                            <li>Advisor: <a href="http://amikerov.webs.com/" class="blue bold">Alexander Mikerov</a>, Ph.D., D.Sc</li>                         
                             -->
 
                         </ul>
@@ -227,17 +225,41 @@
         
         </section>               
         
+
+        <section id="Certifications">
+            <h2>Certifications</h2>
+                    <div class="indent">
+                        <ul> 
+                            <li>DDS Training from RTI (Data Model, Architecture, QoS, Configuring Transports, Keys, Instances, etc)<span style="float:right;font-weight:normal; font-size:1.125em">March 2022</span> </li>
+                            
+                            <li>QNX Training (Architecture, Process & Thread Synchronization, IPC, Boot Image generation, profiling, etc) <span style="float:right;font-weight:normal; font-size:1.125em">March 2020</span> </li>
+
+                            <li><a href="files/Vector_Academy_Certificate.pdf" target="_self">Classic AUTOSAR</a> Training (OS, SW Components, I/O, Comm, State Management, Sys. Services, NV Mem, Diag.) <span style="float:right;font-weight:normal; font-size:1.125em">July 2020</span> </li>
+
+                            <li><a href="files/AUTOSAR_Safe.pdf" target="_self">AUTOSAR Safe</a> Training (Functional Safety, Memory Protection, Program Flow Control, Safe E2E, SafeRTE) <span style="float:right;font-weight:normal; font-size:1.125em">November 2020</span> </li>
+
+                            <li><a href="files/AUTOSAR_CyberSecurity.pdf" target="_self">AUTOSAR CyberSecurity</a> Training (Basics of Cryptography, AutoSAR Crypto Stack, Secure OnBoard Comms, HSM) <span style="float:right;font-weight:normal; font-size:1.125em">December 2020</span> </li>
+
+                            <li><a href="files/MICROSAR_Ethernet.pdf" target="_self">MICROSAR Ethernet</a> Training (Basics of Ethernet and TCP/IP, Ethernet in AUTOSAR, SOME/IP, etc) <span style="float:right;font-weight:normal; font-size:1.125em">May 2021</span> </li>
+
+                            <li><a href="files/AWS_Certification.pdf">AWS Certification</a> "Running Container-Enabled Microservices on AWS" <span style="float:right;font-weight:normal; font-size:1.125em">May 2019</span> </li>
+                            
+                            <li><a href="files/pilot_license.jpg" class="blue bold">FAA licensed</a> Drone Pilot, Part 107 <span style="float:right;font-weight:normal; font-size:1.125em">Jan 2017</span> </li>             
+                        </ul>
+                    </div>
+        </section> 
+
 		<section id="Honors and Awards">
 			<h2>Honors &amp Awards</h2>
             <div class="indent">
                         <ul>
-                            <li>Graduated top of class (top 1%, Master degree), awarded <a href="http://www.eltech.ru/ru/vypusknikam/luchshie-vypuskniki" class="blue bold"><i>Best Graduate of the University</i></a>, (SPb ETU), 2015.</li>
+                            <li>Graduated top of class (top 1%, Master degree), awarded <a href="http://www.eltech.ru/ru/vypusknikam/luchshie-vypuskniki" class="blue bold"><i>Best Graduate of the University</i></a>, (SPb ETU), 2015</li>
                             
-                            <li>Presidential Scholarship recipient (Russia's most prestigious academic award at Master level), (SPb ETU), 2014.</li>
+                            <li>Presidential Scholarship recipient (Russia's most prestigious academic award at Master level), (SPb ETU), 2014</li>
                             
-                            <li>Graduated top of class (top 1%, Bachelor degree), awarded <a href="http://www.eltech.ru/ru/vypusknikam/luchshie-vypuskniki" class="blue bold"><i>Best Graduate of the University</i></a>, (SPb ETU), 2013.</li>
+                            <li>Graduated top of class (top 1%, Bachelor degree), awarded <a href="http://www.eltech.ru/ru/vypusknikam/luchshie-vypuskniki" class="blue bold"><i>Best Graduate of the University</i></a>, (SPb ETU), 2013</li>
                             
-                            <li>Scientific Council Scholarship recipient (University's most prestigious academic award), (SPb ETU), 2011, 2012, 2013, 2014.</li>
+                            <li>Scientific Council Scholarship recipient (University's most prestigious academic award), (SPb ETU), 2011, 2012, 2013, 2014</li>
                         </ul>
                     </div> 
 		</section>         
@@ -246,15 +268,15 @@
 			<h2>Leadership &amp Service</h2>
             <div class="indent">
                         <ul>
-                            <li>Book proposal reviewer for Springer Nature since 2019.</li>
+                            <li>Book proposal reviewer for Springer Nature since 2019</li>
                             
-                            <li>Reviewer for ACC (American Control Conference) since 2017.</li>
+                            <li>Reviewer for ACC (American Control Conference) since 2017</li>
                             
-                            <li>Member of IEEE (Institute of Electrical and Electronics Engineers) since 2012.</li>
+                            <li>Member of IEEE (Institute of Electrical and Electronics Engineers) since 2012</li>
                             
-                            <li>Saint Petersburg Electrotechnical University IEEE Student Branch, Graduate Student Member, elected Chair (in 2014).</li>
+                            <li>Saint Petersburg Electrotechnical University IEEE Student Branch, Graduate Student Member, elected Chair (in 2014)</li>
                             
-                            <li>Region 8 Student and Young Professionals Congress, (Krakow, Poland), Student Branch Chair / 2014 year participant.</li>
+                            <li>Region 8 Student and Young Professionals Congress, (Krakow, Poland), Student Branch Chair / 2014 year participant</li>
                         </ul>
                     </div>
 		</section>
@@ -272,24 +294,26 @@
 				<h5 itemprop="about", style="font-weight:bold;">Devepment Skills:</h5>
 				<ul>
 					
-					<li itemprop="itemListElement">C++14/C++20 (~6 years)</li>
-                    <li itemprop="itemListElement">C (~7 years)</li>
-					<li itemprop="itemListElement">Linux/Ubuntu (~8 years)</li>
-					<li itemprop="itemListElement">CMake (~3 years)</li>
-					<li itemprop="itemListElement">Software Packaging (~1 years)</li>
-                    <li itemprop="itemListElement">Conan (~1 years)</li>
-                    <li itemprop="itemListElement">Python (~2.5 years)</li>
-					<li itemprop="itemListElement">Bash (~5 years)</li>
-                    <li itemprop="itemListElement">Docker (~6 year)</li>
-                    <li itemprop="itemListElement">Jenkins (~1.5 year)</li>
-                    <li itemprop="itemListElement">AppImage (~1 year)</li>
-                    <li itemprop="itemListElement">Git (~5 years)</li>
-                    <li itemprop="itemListElement">JIRA (~1.5 year)</li>
-                    <li itemprop="itemListElement">ROS/C++ (~2.5 years)</li>
-                    <li itemprop="itemListElement">MATLAB/Simulink (~6 years)</li>
-                    <li itemprop="itemListElement">CPLEX/C++ (~1 year)</li>
-					<li itemprop="itemListElement">Z3/C++ (~0.5 year)</li>
-					<li itemprop="itemListElement">Qt (~1 year)</li>
+					<li itemprop="itemListElement">C++14/C++20 (6 years)</li>
+                    <li itemprop="itemListElement">Python (6 years)</li>
+                    <li itemprop="itemListElement">Git (5 years)</li>
+                    <li itemprop="itemListElement">JIRA (6 years)</li>
+                    <li itemprop="itemListElement">C (7 years)</li>
+					<li itemprop="itemListElement">Linux/Ubuntu (8 years)</li>
+                    <li itemprop="itemListElement">Bazel (2 years)</li>
+					<li itemprop="itemListElement">CMake (4 years)</li>
+					<li itemprop="itemListElement">Software Packaging (1.5 years)</li>
+                    <li itemprop="itemListElement">Conan (1.5 years)</li>
+					<li itemprop="itemListElement">Bash (7 years)</li>
+                    <li itemprop="itemListElement">Docker (6 years)</li>
+                    <li itemprop="itemListElement">Jenkins (6 years)</li>
+                    <li itemprop="itemListElement">GitLab CI (1 year)</li>
+                    <li itemprop="itemListElement">AppImage (1 year)</li>
+                    <li itemprop="itemListElement">ROS (2.5 years)</li>
+                    <li itemprop="itemListElement">MATLAB/Simulink (6 years)</li>
+                    <li itemprop="itemListElement">CPLEX (~1 year)</li>
+					<li itemprop="itemListElement">Z3 (0.5 year)</li>
+					<li itemprop="itemListElement">Qt (1 year)</li>
                     <li itemprop="itemListElement">OMPL</li>
                     <li itemprop="itemListElement">OpenCV</li>
                     <li itemprop="itemListElement">MoveIt!</li>
@@ -305,9 +329,9 @@
                     <li itemprop="itemListElement"><a href="files/Ethernet_from_scratch.pdf"> Ethernet</a></li>
                     <li itemprop="itemListElement"><a href="files/SqlEssentialTraining.pdf"> SQL</a></li>
                     <li itemprop="itemListElement">JSON</li>
-                    <li itemprop="itemListElement">PLC (~2 years)</li>
+                    <li itemprop="itemListElement">PLC (2 years)</li>
                     <li itemprop="itemListElement">Data Management</li>
-                    <li itemprop="itemListElement">CAD Modeling (~2 years)</li>
+                    <li itemprop="itemListElement">CAD Modeling (2 years)</li>
                     <li itemprop="itemListElement"><a href="files/ABS_phone_holder.jpg"> 3D printing</a> </li>        
 					<li itemprop="itemListElement">Weka</li> 
                     <li itemprop="itemListElement">VerilogA</li>
